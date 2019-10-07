@@ -11,6 +11,12 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class PoolThreadTest {
     public static void main(String[] args) {
+
+    }
+    /**
+     * 使用Semaphore创建字符串池（数据库连接池。。。）
+     */
+    private static void poolTest(){
         ListPool listPool = new ListPool();
         /*
         线程组:12个线程,每个线程都从字符串池中取值，完成后再放回池中
@@ -28,8 +34,10 @@ public class PoolThreadTest {
     }
 }
 
+
 /**
  * 字符串池
+ * 开始
  */
 class ListPool{
     //池中允许存放最大数量
@@ -105,3 +113,7 @@ class MyThread extends Thread{
         }
     }
 }
+/**
+ * 字符串池
+ * 结束
+ */

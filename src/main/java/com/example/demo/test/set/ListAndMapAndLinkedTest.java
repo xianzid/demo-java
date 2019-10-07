@@ -4,8 +4,22 @@ import java.util.*;
 
 public class ListAndMapAndLinkedTest {
     public static void main(String[] args) {
+        testToString();
+    }
+
+    private static void testToString(){
+        HashMap h = newMap(20);
+        System.out.println(h.toString());
+    }
+
+    /**
+     * 测试用时
+     */
+    private static void testUseTime(){
+        //测试列表长度为20
+        int size = 20;
         long s1 = System.nanoTime();
-        ArrayList<String> arrayList = newList();
+        ArrayList<String> arrayList = newList(size);
         long s2 = System.nanoTime();
         System.out.printf("List新增用时：%d,从%d到%d%n" , (s2-s1), s1, s2);
         s1 = System.nanoTime();
@@ -21,7 +35,7 @@ public class ListAndMapAndLinkedTest {
         System.out.printf("List删除多条用时：%d ,从%d到%d%n" , (s2-s1), s1, s2);
 
         s1 = System.nanoTime();
-        HashMap<Integer, String> map = newMap();
+        HashMap<Integer, String> map = newMap(size);
         s2 = System.nanoTime();
         System.out.printf("Map新增用时：%d ,从%d到%d%n" , (s2-s1), s1, s2);
         s1 = System.nanoTime();
@@ -37,7 +51,7 @@ public class ListAndMapAndLinkedTest {
         System.out.printf("Map删除多条用时：%d ,从%d到%d%n" , (s2-s1), s1, s2);
 
         s1 = System.nanoTime();
-        LinkedList<String> linkedList = newLinkedList();
+        LinkedList<String> linkedList = newLinkedList(size);
         s2 = System.nanoTime();
         System.out.printf("LinkedList新增用时：%d ,从%d到%d%n" , (s2-s1), s1, s2);
         linkedList.remove("Tom");
@@ -59,15 +73,14 @@ public class ListAndMapAndLinkedTest {
         iterableLMap(map);
         s2 = System.nanoTime();
         System.out.printf("Map遍历用时：%d ,从%d到%d%n" , (s2-s1), s1, s2);
-
     }
 
     /*
     新增ArrayList
      */
-    private static ArrayList<String> newList(){
+    private static ArrayList<String> newList(int size){
         ArrayList<String> arrayList = new ArrayList<String>();
-        for(int i=0;i<20;i++){
+        for(int i=0;i<size;i++){
             arrayList.add(("name"+i));
         }
         return  arrayList;
@@ -76,9 +89,9 @@ public class ListAndMapAndLinkedTest {
     /*
         新增HashMap
     */
-    private static HashMap<Integer, String> newMap(){
+    private static HashMap<Integer, String> newMap(int size){
         HashMap<Integer, String> map = new HashMap<Integer, String>();
-        for(int i=0;i<20;i++){
+        for(int i=0;i<size;i++){
             map.put((i+1), ("name"+i));
         }
         return map;
@@ -87,9 +100,9 @@ public class ListAndMapAndLinkedTest {
     /*
         新增LinkedList
     */
-    private static LinkedList<String> newLinkedList(){
+    private static LinkedList<String> newLinkedList(int size){
         LinkedList<String> linkedList = new LinkedList<String>();
-        for(int i=0;i<20;i++){
+        for(int i=0;i<size;i++){
             linkedList.add(("name"+i));
         }
         return  linkedList;

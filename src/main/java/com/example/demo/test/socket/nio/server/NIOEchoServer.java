@@ -12,6 +12,7 @@ import java.util.concurrent.Executors;
 
 /**
  * 基于NIO实现数据的交互处理模式
+ * NIO是基于Buffer缓冲操作实现的功能，需要将输入的内容保存在缓存之中
  */
 public class NIOEchoServer {
     public static void main(String[] args) throws Exception {

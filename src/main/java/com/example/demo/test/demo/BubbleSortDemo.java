@@ -2,12 +2,12 @@ package com.example.demo.test.demo;
 
 public class BubbleSortDemo {
     public static void main(String[] args) {
-        int data1 [] = new int[]{4,5,3,2,1};
+        int data1 [] = new int[]{10,3,40,8,12};
         //print(data);
         System.out.println("******开始排序******");
         long time1 = System.nanoTime();
         //bubbleSort(data1);
-        invertSort(data1);
+        selfSort(data1);
         printUseTime(time1);
         /*int data2 [] = new int[]{1,2,4,3,5};
         time1 = System.nanoTime();

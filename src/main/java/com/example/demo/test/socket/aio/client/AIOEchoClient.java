@@ -11,6 +11,7 @@ import java.util.concurrent.CountDownLatch;
 
 class ClientReadHandler implements CompletionHandler<Integer,ByteBuffer> {
     private AsynchronousSocketChannel clientChannel ;
+    //用来控制客户端失败时关闭
     private CountDownLatch latch ;
     public ClientReadHandler(AsynchronousSocketChannel clientChannel,CountDownLatch latch) {
         this.clientChannel = clientChannel ;

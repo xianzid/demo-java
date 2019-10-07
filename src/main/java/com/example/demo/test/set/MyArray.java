@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 /**
  * 自己写的数组列表
+ * 列表实现类：数组列表
  */
 public class MyArray implements MyList{
-    //数组对象
+    //数组对象，数组内元素为int型
     private int[] array;
     //当前数组长度
     private int index;
@@ -21,7 +22,8 @@ public class MyArray implements MyList{
     }
 
     public void addList(int num){
-        if (num == MAX_INDEX)
+        //数组是否需要扩容
+        if (index >= MAX_INDEX-1)
         {
             MAX_INDEX = array.length + (array.length >> 1);//10 00001010>>1 00000101 5 ~~array.length*1.5
             array = Arrays.copyOf(array, MAX_INDEX);

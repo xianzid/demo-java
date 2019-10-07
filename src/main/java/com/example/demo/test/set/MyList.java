@@ -2,7 +2,8 @@ package com.example.demo.test.set;
 
 
 /**
- * 自己写的列表
+ * 自己写的列表接口
+ * 实现新增、单个删除、修改、查找、获取列表长度
  */
 public interface MyList {
     /*

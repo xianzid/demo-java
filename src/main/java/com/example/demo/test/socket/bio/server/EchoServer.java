@@ -14,6 +14,11 @@ class EchoServerHandle implements AutoCloseable {
         System.out.println("ECHO服务器端已经启动了，该服务在" + ServerInfo.PORT + "端口上监听....");
         this.clientConnect();
     }
+
+    /**
+     * 实现可实现短连接也可实现常连接，当前实现为短连接
+     * @throws Exception
+     */
     private void clientConnect() throws Exception {
         boolean serverFlag = true ;
         while(serverFlag) {

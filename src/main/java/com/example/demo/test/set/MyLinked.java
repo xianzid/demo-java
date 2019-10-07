@@ -2,6 +2,7 @@ package com.example.demo.test.set;
 
 /**
  * 自己写的链表列表
+ * 列表实现类：链表
  */
 public class MyLinked implements MyList{
     /*

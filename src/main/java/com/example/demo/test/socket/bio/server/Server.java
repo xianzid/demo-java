@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 简单版服务器
+ */
 class ServerHandler{
     ServerSocket server;
     public ServerHandler() throws IOException{
