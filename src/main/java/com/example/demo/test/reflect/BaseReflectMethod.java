@@ -18,7 +18,7 @@ public class BaseReflectMethod {
 
         //3.通过Class的forName()方法
         try {
-            aClass = Class.forName("Dept");
+            aClass = Class.forName("com.example.demo.test.reflect.object.Dept");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
