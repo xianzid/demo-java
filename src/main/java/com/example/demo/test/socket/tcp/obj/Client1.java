@@ -1,7 +1,8 @@
-package com.example.demo.test.socket.tcp;
+package com.example.demo.test.socket.tcp.obj;
 
 import com.example.demo.model.User;
 import com.example.demo.model.UserActionBean;
+import com.example.demo.test.socket.commons.ServerInfo;
 import com.example.demo.tools.CloseUtils;
 
 import java.io.IOException;
@@ -14,7 +15,7 @@ public class Client1 {
         Socket socket = null;
         try {
             //客户端启动
-            socket = new Socket("LocalHost",8880);
+            socket = new Socket(ServerInfo.ECHO_SERVER_HOST,ServerInfo.PORT);
             System.out.println("～～～客户端已启动～～～");
 
             //用户注册

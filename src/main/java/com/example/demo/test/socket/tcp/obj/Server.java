@@ -1,4 +1,7 @@
-package com.example.demo.test.socket.tcp;
+package com.example.demo.test.socket.tcp.obj;
+
+import com.example.demo.test.socket.commons.ServerInfo;
+import com.example.demo.test.socket.tcp.obj.ServerThread;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -8,7 +11,7 @@ public class Server {
     public static void main(String[] args) {
         try {
             //创建服务器
-            ServerSocket serverSocket = new ServerSocket(8880);
+            ServerSocket serverSocket = new ServerSocket(ServerInfo.PORT);
             System.out.println("～～～服务器已启动～～～");
             while (true){
                 //阻塞等待客户端信息

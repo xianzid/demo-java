@@ -1,4 +1,4 @@
-package com.example.demo.test.socket.tcp;
+package com.example.demo.test.socket.tcp.obj;
 
 import com.example.demo.model.UserActionBean;
 import com.example.demo.tools.CloseUtils;
