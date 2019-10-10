@@ -13,7 +13,7 @@ public class Dept {
         this.deptName = deptName;
         this.level = level;
     }
-    public Dept(String deptName, int level, Dept superDept){
+    public Dept(String deptName, int level, Dept superDept) throws IllegalArgumentException{
         this.deptName = deptName;
         this.level = level;
         this.supior = superDept.id;
