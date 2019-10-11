@@ -15,6 +15,7 @@ public class GetConstructInfo {
             //获取构造方法
             final Constructor<?>[] cons = cls.getConstructors();
             for (Constructor<?> con : cons) {
+                
                 //获取修饰符、名称
                 str.append(Modifier.toString(con.getModifiers())).append(" ");
                 str.append(con.getName()).append("(");

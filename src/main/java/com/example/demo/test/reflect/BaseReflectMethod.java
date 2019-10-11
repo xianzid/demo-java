@@ -21,12 +21,12 @@ public class BaseReflectMethod {
         /**
          * 必须类已存在，才能使用（否则编译就会出错）
          */
-        //1.通过对象的getClass()方法
+        //1.通过(new)对象(Object)的getClass()方法
         //几乎不会用到
         Dept dept = new Dept();
         aClass = dept.getClass();
 
-        //2.通过对象的class属性
+        //2.通过类名实现：class属性
         //只有框架技术上使用
         aClass = Dept.class;
 
