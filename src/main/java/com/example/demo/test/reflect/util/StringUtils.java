@@ -8,6 +8,9 @@ public class StringUtils {
         if (1 == fileName.length()){
             return fileName.toUpperCase();
         }
+        if (fileName.startsWith("is")){
+            return fileName.substring(2);
+        }
         return fileName.substring(0, 1).toUpperCase() + fileName.substring(1);
     }
 }

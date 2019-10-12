@@ -1,6 +1,6 @@
 package com.example.demo.test.reflect;
 
-import com.example.demo.test.reflect.object.Dept;
+import com.example.demo.test.reflect.model.Dept;
 
 /**
  * 获取类类型的三种方式
@@ -36,7 +36,7 @@ public class BaseReflectMethod {
         //3.通过Class的forName()方法
         //jdbc有用
         try {
-            aClass = Class.forName("com.example.demo.test.reflect.object.Dept");
+            aClass = Class.forName("com.example.demo.test.reflect.model.Dept");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -50,7 +50,7 @@ public class BaseReflectMethod {
         Dept dept = new Dept();
         //2。Class对象的newInstance()方法
         try {
-            Class<?> cls = Class.forName("com.example.demo.test.reflect.object.Dept");
+            Class<?> cls = Class.forName("com.example.demo.test.reflect.model.Dept");
             Object  obj = cls.newInstance();
         } catch (InstantiationException | ClassNotFoundException | IllegalAccessException e) {
             e.printStackTrace();

@@ -9,7 +9,7 @@ import java.lang.reflect.Modifier;
 public class GetConstructInfo {
     public static void main(String[] args) {
         try {
-            final Class<?> cls = Class.forName("com.example.demo.test.reflect.object.Dept");
+            final Class<?> cls = Class.forName("com.example.demo.test.reflect.model.Dept");
             StringBuffer str = new StringBuffer();
 
             //获取构造方法
