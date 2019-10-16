@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -35,6 +36,8 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     @Transient
     private UserType userTypeStr;
+
+    private BigDecimal account;
 
     public User(){}
 
@@ -88,5 +91,29 @@ public class User implements Serializable {
 
     public void setRegTime(String regTime) {
         this.regTime = regTime;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    public UserType getUserTypeStr() {
+        return userTypeStr;
+    }
+
+    public void setUserTypeStr(UserType userTypeStr) {
+        this.userTypeStr = userTypeStr;
+    }
+
+    public BigDecimal getAccount() {
+        return account;
+    }
+
+    public void setAccount(BigDecimal account) {
+        this.account = account;
     }
 }
