@@ -1,6 +1,6 @@
 package com.example.demo.test.reflect;
 
-import com.example.demo.test.reflect.model.*;
+import com.example.demo.model.*;
 
 /**
  * 反射实现了面向接口的概念，同样的功能用接口实现，与工厂模式一样
@@ -16,7 +16,7 @@ public class ToAnInterface {
      * 反射的实现
      */
     private static void reflectImp(){
-        final UserPrint user = new UserFactory().getInstance("com.example.demo.test.reflect.model.Customer");
+        final UserPrint user = new UserFactory().getInstance("com.example.demo.model.Customer");
         user.getInfo();
     }
 

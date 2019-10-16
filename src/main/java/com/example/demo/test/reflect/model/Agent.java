@@ -1,6 +1,6 @@
 package com.example.demo.test.reflect.model;
 
-public class Agent extends User implements UserPrint{
+public class Agent extends User implements UserPrint {
     public String union;
 
     @Override

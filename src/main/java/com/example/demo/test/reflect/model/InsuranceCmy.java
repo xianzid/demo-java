@@ -1,6 +1,6 @@
 package com.example.demo.test.reflect.model;
 
-public class InsuranceCmy extends User implements UserPrint{
+public class InsuranceCmy extends User implements UserPrint {
     public String insurer;
     @Override
     public void getInfo() {
