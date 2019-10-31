@@ -345,7 +345,7 @@
 //     * code units</a> in the string.
 //     *
 //     * @return  the length of the sequence of characters represented by this
-//     *          object.
+//     *          model.
 //     */
 //    public int length() {
 //        return value.length;
@@ -660,15 +660,15 @@
 //    }
 //
 //    /**
-//     * Compares this string to the specified object.  The result is {@code
+//     * Compares this string to the specified model.  The result is {@code
 //     * true} if and only if the argument is not {@code null} and is a {@code
-//     * String} object that represents the same sequence of characters as this
-//     * object.
+//     * String} model that represents the same sequence of characters as this
+//     * model.
 //     *
 //     * @param  anObject
-//     *         The object to compare this {@code String} against
+//     *         The model to compare this {@code String} against
 //     *
-//     * @return  {@code true} if the given object represents a {@code String}
+//     * @return  {@code true} if the given model represents a {@code String}
 //     *          equivalent to this string, {@code false} otherwise
 //     *
 //     * @see  #compareTo(String)
@@ -814,11 +814,11 @@
 //     * Compares two strings lexicographically.
 //     * The comparison is based on the Unicode value of each character in
 //     * the strings. The character sequence represented by this
-//     * {@code String} object is compared lexicographically to the
+//     * {@code String} model is compared lexicographically to the
 //     * character sequence represented by the argument string. The result is
-//     * a negative integer if this {@code String} object
+//     * a negative integer if this {@code String} model
 //     * lexicographically precedes the argument string. The result is a
-//     * positive integer if this {@code String} object lexicographically
+//     * positive integer if this {@code String} model lexicographically
 //     * follows the argument string. The result is zero if the strings
 //     * are equal; {@code compareTo} returns {@code 0} exactly when
 //     * the {@link #equals(Object)} method would return {@code true}.
@@ -912,7 +912,7 @@
 //            return n1 - n2;
 //        }
 //
-//        /** Replaces the de-serialized object. */
+//        /** Replaces the de-serialized model. */
 //        private Object readResolve() { return CASE_INSENSITIVE_ORDER; }
 //    }
 //
@@ -943,10 +943,10 @@
 //    /**
 //     * Tests if two string regions are equal.
 //     * <p>
-//     * A substring of this {@code String} object is compared to a substring
+//     * A substring of this {@code String} model is compared to a substring
 //     * of the argument other. The result is true if these substrings
 //     * represent identical character sequences. The substring of this
-//     * {@code String} object to be compared begins at index {@code toffset}
+//     * {@code String} model to be compared begins at index {@code toffset}
 //     * and has length {@code len}. The substring of other to be compared
 //     * begins at index {@code ooffset} and has length {@code len}. The
 //     * result is {@code false} if and only if at least one of the following
@@ -954,7 +954,7 @@
 //     * <ul><li>{@code toffset} is negative.
 //     * <li>{@code ooffset} is negative.
 //     * <li>{@code toffset+len} is greater than the length of this
-//     * {@code String} object.
+//     * {@code String} model.
 //     * <li>{@code ooffset+len} is greater than the length of the other
 //     * argument.
 //     * <li>There is some nonnegative integer <i>k</i> less than {@code len}
@@ -995,11 +995,11 @@
 //    /**
 //     * Tests if two string regions are equal.
 //     * <p>
-//     * A substring of this {@code String} object is compared to a substring
+//     * A substring of this {@code String} model is compared to a substring
 //     * of the argument {@code other}. The result is {@code true} if these
 //     * substrings represent character sequences that are the same, ignoring
 //     * case if and only if {@code ignoreCase} is true. The substring of
-//     * this {@code String} object to be compared begins at index
+//     * this {@code String} model to be compared begins at index
 //     * {@code toffset} and has length {@code len}. The substring of
 //     * {@code other} to be compared begins at index {@code ooffset} and
 //     * has length {@code len}. The result is {@code false} if and only if
@@ -1007,7 +1007,7 @@
 //     * <ul><li>{@code toffset} is negative.
 //     * <li>{@code ooffset} is negative.
 //     * <li>{@code toffset+len} is greater than the length of this
-//     * {@code String} object.
+//     * {@code String} model.
 //     * <li>{@code ooffset+len} is greater than the length of the other
 //     * argument.
 //     * <li>{@code ignoreCase} is {@code false} and there is some nonnegative
@@ -1090,11 +1090,11 @@
 //     * @param   prefix    the prefix.
 //     * @param   toffset   where to begin looking in this string.
 //     * @return  {@code true} if the character sequence represented by the
-//     *          argument is a prefix of the substring of this object starting
+//     *          argument is a prefix of the substring of this model starting
 //     *          at index {@code toffset}; {@code false} otherwise.
 //     *          The result is {@code false} if {@code toffset} is
 //     *          negative or greater than the length of this
-//     *          {@code String} object; otherwise the result is the same
+//     *          {@code String} model; otherwise the result is the same
 //     *          as the result of the expression
 //     *          <pre>
 //     *          this.substring(toffset).startsWith(prefix)
@@ -1131,9 +1131,9 @@
 //     * @param   suffix   the suffix.
 //     * @return  {@code true} if the character sequence represented by the
 //     *          argument is a suffix of the character sequence represented by
-//     *          this object; {@code false} otherwise. Note that the
+//     *          this model; {@code false} otherwise. Note that the
 //     *          result will be {@code true} if the argument is the
-//     *          empty string or is equal to this {@code String} object
+//     *          empty string or is equal to this {@code String} model
 //     *          as determined by the {@link #equals(Object)} method.
 //     */
 //    public boolean endsWith(String suffix) {
@@ -1163,7 +1163,7 @@
 //     * Returns the index within this string of the first occurrence of
 //     * the specified character. If a character with value
 //     * {@code ch} occurs in the character sequence represented by
-//     * this {@code String} object, then the index (in Unicode
+//     * this {@code String} model, then the index (in Unicode
 //     * code units) of the first such occurrence is returned. For
 //     * values of {@code ch} in the range from 0 to 0xFFFF
 //     * (inclusive), this is the smallest value <i>k</i> such that:
@@ -1180,7 +1180,7 @@
 //     *
 //     * @param   ch   a character (Unicode code point).
 //     * @return  the index of the first occurrence of the character in the
-//     *          character sequence represented by this object, or
+//     *          character sequence represented by this model, or
 //     *          {@code -1} if the character does not occur.
 //     */
 //    public int indexOf(int ch) {
@@ -1193,7 +1193,7 @@
 //     * <p>
 //     * If a character with value {@code ch} occurs in the
 //     * character sequence represented by this {@code String}
-//     * object at an index no smaller than {@code fromIndex}, then
+//     * model at an index no smaller than {@code fromIndex}, then
 //     * the index of the first such occurrence is returned. For values
 //     * of {@code ch} in the range from 0 to 0xFFFF (inclusive),
 //     * this is the smallest value <i>k</i> such that:
@@ -1222,7 +1222,7 @@
 //     * @param   ch          a character (Unicode code point).
 //     * @param   fromIndex   the index to start the search from.
 //     * @return  the index of the first occurrence of the character in the
-//     *          character sequence represented by this object that is greater
+//     *          character sequence represented by this model that is greater
 //     *          than or equal to {@code fromIndex}, or {@code -1}
 //     *          if the character does not occur.
 //     */
@@ -1288,7 +1288,7 @@
 //     *
 //     * @param   ch   a character (Unicode code point).
 //     * @return  the index of the last occurrence of the character in the
-//     *          character sequence represented by this object, or
+//     *          character sequence represented by this model, or
 //     *          {@code -1} if the character does not occur.
 //     */
 //    public int lastIndexOf(int ch) {
@@ -1325,7 +1325,7 @@
 //     *          If it is negative, it has the same effect as if it were -1:
 //     *          -1 is returned.
 //     * @return  the index of the last occurrence of the character in the
-//     *          character sequence represented by this object that is less
+//     *          character sequence represented by this model that is less
 //     *          than or equal to {@code fromIndex}, or {@code -1}
 //     *          if the character does not occur before that point.
 //     */
@@ -1604,7 +1604,7 @@
 //     * @return     the specified substring.
 //     * @exception  IndexOutOfBoundsException  if
 //     *             {@code beginIndex} is negative or larger than the
-//     *             length of this {@code String} object.
+//     *             length of this {@code String} model.
 //     */
 //    public String substring(int beginIndex) {
 //        if (beginIndex < 0) {
@@ -1635,7 +1635,7 @@
 //     * @exception  IndexOutOfBoundsException  if the
 //     *             {@code beginIndex} is negative, or
 //     *             {@code endIndex} is larger than the length of
-//     *             this {@code String} object, or
+//     *             this {@code String} model, or
 //     *             {@code beginIndex} is larger than
 //     *             {@code endIndex}.
 //     */
@@ -1691,10 +1691,10 @@
 //     * Concatenates the specified string to the end of this string.
 //     * <p>
 //     * If the length of the argument string is {@code 0}, then this
-//     * {@code String} object is returned. Otherwise, a
-//     * {@code String} object is returned that represents a character
+//     * {@code String} model is returned. Otherwise, a
+//     * {@code String} model is returned that represents a character
 //     * sequence that is the concatenation of the character sequence
-//     * represented by this {@code String} object and the character
+//     * represented by this {@code String} model and the character
 //     * sequence represented by the argument string.<p>
 //     * Examples:
 //     * <blockquote><pre>
@@ -1704,7 +1704,7 @@
 //     *
 //     * @param   str   the {@code String} that is concatenated to the end
 //     *                of this {@code String}.
-//     * @return  a string that represents the concatenation of this object's
+//     * @return  a string that represents the concatenation of this model's
 //     *          characters followed by the string argument's characters.
 //     */
 //    public String concat(String str) {
@@ -1723,11 +1723,11 @@
 //     * {@code oldChar} in this string with {@code newChar}.
 //     * <p>
 //     * If the character {@code oldChar} does not occur in the
-//     * character sequence represented by this {@code String} object,
-//     * then a reference to this {@code String} object is returned.
-//     * Otherwise, a {@code String} object is returned that
+//     * character sequence represented by this {@code String} model,
+//     * then a reference to this {@code String} model is returned.
+//     * Otherwise, a {@code String} model is returned that
 //     * represents a character sequence identical to the character sequence
-//     * represented by this {@code String} object, except that every
+//     * represented by this {@code String} model, except that every
 //     * occurrence of {@code oldChar} is replaced by an occurrence
 //     * of {@code newChar}.
 //     * <p>
@@ -2521,22 +2521,22 @@
 //     * Returns a string whose value is this string, with any leading and trailing
 //     * whitespace removed.
 //     * <p>
-//     * If this {@code String} object represents an empty character
+//     * If this {@code String} model represents an empty character
 //     * sequence, or the first and last characters of character sequence
-//     * represented by this {@code String} object both have codes
+//     * represented by this {@code String} model both have codes
 //     * greater than {@code '\u005Cu0020'} (the space character), then a
-//     * reference to this {@code String} object is returned.
+//     * reference to this {@code String} model is returned.
 //     * <p>
 //     * Otherwise, if there is no character with a code greater than
 //     * {@code '\u005Cu0020'} in the string, then a
-//     * {@code String} object representing an empty string is
+//     * {@code String} model representing an empty string is
 //     * returned.
 //     * <p>
 //     * Otherwise, let <i>k</i> be the index of the first character in the
 //     * string whose code is greater than {@code '\u005Cu0020'}, and let
 //     * <i>m</i> be the index of the last character in the string whose code
 //     * is greater than {@code '\u005Cu0020'}. A {@code String}
-//     * object is returned, representing the substring of this string that
+//     * model is returned, representing the substring of this string that
 //     * begins with the character at index <i>k</i> and ends with the
 //     * character at index <i>m</i>-that is, the result of
 //     * {@code this.substring(k, m + 1)}.
@@ -2563,7 +2563,7 @@
 //    }
 //
 //    /**
-//     * This object (which is already a string!) is itself returned.
+//     * This model (which is already a string!) is itself returned.
 //     *
 //     * @return  the string itself.
 //     */
@@ -2826,16 +2826,16 @@
 //    }
 //
 //    /**
-//     * Returns a canonical representation for the string object.
+//     * Returns a canonical representation for the string model.
 //     * <p>
 //     * A pool of strings, initially empty, is maintained privately by the
 //     * class {@code String}.
 //     * <p>
 //     * When the intern method is invoked, if the pool already contains a
-//     * string equal to this {@code String} object as determined by
+//     * string equal to this {@code String} model as determined by
 //     * the {@link #equals(Object)} method, then the string from the pool is
-//     * returned. Otherwise, this {@code String} object is added to the
-//     * pool and a reference to this {@code String} object is returned.
+//     * returned. Otherwise, this {@code String} model is added to the
+//     * pool and a reference to this {@code String} model is returned.
 //     * <p>
 //     * It follows that for any two strings {@code s} and {@code t},
 //     * {@code s.intern() == t.intern()} is {@code true}

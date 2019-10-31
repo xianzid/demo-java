@@ -49,9 +49,10 @@ public class BaseReflectMethod {
         //1。new关键字
         Dept dept = new Dept();
         //2。Class对象的newInstance()方法
+        Object  obj;
         try {
             Class<?> cls = Class.forName("com.example.demo.test.reflect.model.Dept");
-            Object  obj = cls.newInstance();
+            obj = cls.newInstance();
         } catch (InstantiationException | ClassNotFoundException | IllegalAccessException e) {
             e.printStackTrace();
         }

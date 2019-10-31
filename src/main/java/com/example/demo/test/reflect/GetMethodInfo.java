@@ -63,6 +63,7 @@ public class GetMethodInfo {
                 continue;
             }
 
+            //适合格式：setField(fieldType field){}
             String methodName = StringUtils.initFiledName(temp[0]);
             Field field = cls.getDeclaredField(temp[0]);
             Class paramType = field.getType();
@@ -81,7 +82,7 @@ public class GetMethodInfo {
      * 属性名: 属性值 | 属性名: 属性值| 。。。
      */
     private static void methodUtil(){
-        StringBuffer str = new StringBuffer();
+        StringBuilder str = new StringBuilder();
         try {
             final Class<?> aClass = Class.forName("com.example.demo.test.reflect.model.Dept");
             final Object obj = aClass.newInstance();
@@ -108,14 +109,14 @@ public class GetMethodInfo {
 
     /**
      * 参数值类型转换
-     * @param classType
-     * @param paramValue
-     * @return
+     * @param classType     参数类型
+     * @param paramValue    参数值
+     * @return  转型后的参数值
      * @throws IllegalAccessException
      * @throws InstantiationException
      * @throws ParseException
      */
-    private static Object changeType(Class<?> classType, String paramValue) throws IllegalAccessException, InstantiationException, ParseException {
+    private static Object changeType(Class<?> classType, String paramValue) throws ParseException {
         final String paramType = classType.getSimpleName();
         if ("string".equalsIgnoreCase(paramType)){
             return paramValue;

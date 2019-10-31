@@ -3,6 +3,12 @@ package com.example.demo.test.thread;
 //import com.example.demo.tools.TimerUtils;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 使用CountDownLatch来构造运动员到达
+ * 构造初始有个count值，count=0 时await()继续
+ * countDown减，能继续
+ * await等待count减完
+ */
 public class RaceThreadTest {
     //有10个运动员
     private static final int SPORTS_MAN_COUNT = 10;
