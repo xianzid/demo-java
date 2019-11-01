@@ -1,4 +1,4 @@
-package com.example.demo.test.demo;
+package com.example.demo.test.algorithm;
 
 public class BubbleSortDemo {
     public static void main(String[] args) {
