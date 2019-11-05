@@ -2,6 +2,10 @@ package com.example.demo.test.socket.serializer;
 
 import java.io.*;
 
+/**
+ * 序列化：  对象    --> 字节数组
+ * 反序列化：字节数组 --> 对象
+ */
 public class JavaSerializer implements ISerializer {
     @Override
     public <T> byte[] serializer(T obj) {
