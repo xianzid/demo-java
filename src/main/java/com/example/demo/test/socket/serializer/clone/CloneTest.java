@@ -17,7 +17,7 @@ public class CloneTest {
         p1.getEmail().setContent("20:00上课");
         System.out.println("");
 
-        //深克隆
+        //深克隆：对PlanWork对象里面的Email对象也做了克隆
         PlanWork p3 = p1.deepClone();
         p3.setWorkName("1003");
         p3.getEmail().setContent("19:30上课");
