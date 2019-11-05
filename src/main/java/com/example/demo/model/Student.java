@@ -3,6 +3,9 @@ package com.example.demo.model;
 import java.io.Serializable;
 
 public class Student implements Serializable, Comparable<Student> {
+
+    private static final long serialVersionUID = -1632055181705393554L;
+
     private String studentName;
     private int studentAge;
 
