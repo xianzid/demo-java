@@ -2,7 +2,7 @@ package com.example.demo.test.socket.serializer.clone;
 
 import java.io.Serializable;
 
-public class Email{
+public class Email implements Serializable{
     private String content;
 
     public Email(String content) {
