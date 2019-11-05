@@ -6,6 +6,7 @@ public class CloneTest {
     public static void main(String[] args) throws CloneNotSupportedException, IOException, ClassNotFoundException {
         Email email = new Email("20:00上课");
         PlanWork p1 = new PlanWork("1001", email);
+        p1.setDecode("121321");
         //浅克隆
         PlanWork p2 = p1.clone();
         p2.setWorkName("1002");

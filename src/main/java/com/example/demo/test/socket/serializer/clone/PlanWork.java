@@ -6,6 +6,21 @@ public class PlanWork implements Serializable, Cloneable {
     private String workName;
     private Email email;
 
+    //加transient关键字会不对该属性做序列化
+    private transient String decode;
+
+    //手动对属性decode做序列化
+    private void writeObject(ObjectOutputStream objectOutputStream) throws IOException {
+        objectOutputStream.defaultWriteObject();
+        objectOutputStream.writeObject(decode);
+    }
+
+    //手动对属性decode做反序列化
+    private void readObject(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
+        objectInputStream.defaultReadObject();
+        decode = (String) objectInputStream.readObject();
+    }
+
     public PlanWork(String workName) {
         this.workName = workName;
     }
@@ -29,6 +44,14 @@ public class PlanWork implements Serializable, Cloneable {
 
     public void setEmail(Email email) {
         this.email = email;
+    }
+
+    public String getDecode() {
+        return decode;
+    }
+
+    public void setDecode(String decode) {
+        this.decode = decode;
     }
 
     /**
@@ -63,6 +86,7 @@ public class PlanWork implements Serializable, Cloneable {
         return "PlanWork{" +
                 "workName='" + workName + '\'' +
                 ", email=" + email +
+                ", decode='" + decode + '\'' +
                 '}';
     }
 }
